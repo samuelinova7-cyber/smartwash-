@@ -801,6 +801,79 @@ export default function App() {
         </div>
       </section>
 
+      {/* Seja um Franqueado Section */}
+      <section id="franquias" className="py-24 bg-soft-ice overflow-hidden relative">
+        <div className="container mx-auto px-6">
+          <div className="bg-deep-navy rounded-[48px] p-8 lg:p-20 text-white relative overflow-hidden">
+            {/* Background Accents */}
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-vibrant-blue/10 skew-x-12 translate-x-1/4"></div>
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-lavender/20 rounded-full blur-[100px]"></div>
+
+            <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+              <div>
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white px-4 py-1.5 rounded-full text-[11px] font-bold tracking-wider uppercase mb-8 border border-white/20">
+                  Oportunidade de Negócio
+                </div>
+                <h2 className="text-4xl md:text-6xl font-black mb-8 leading-[1.1] tracking-tight uppercase">
+                  Seja um <span className="text-vibrant-blue">Franqueado</span> SmartWash
+                </h2>
+                <p className="text-lg text-white/60 mb-10 leading-relaxed">
+                  Invista no setor que mais cresce no Brasil. Um modelo de negócio self-service, com baixo custo operacional, alta tecnologia e suporte completo para você lucrar em Salvador e região.
+                </p>
+                
+                <div className="grid sm:grid-cols-2 gap-6 mb-10">
+                  {[
+                    { icon: Zap, title: "Operação Enxuta", desc: "Sem necessidade de funcionários fixos." },
+                    { icon: ShieldCheck, title: "Suporte Total", desc: "Da escolha do ponto ao marketing." },
+                    { icon: Coins, title: "Alta Rentabilidade", desc: "Retorno sobre investimento acelerado." },
+                    { icon: Sparkles, title: "Marca Forte", desc: "Referência em qualidade e tecnologia." }
+                  ].map((item, i) => (
+                    <div key={i} className="flex flex-col gap-3">
+                      <div className="w-10 h-10 bg-vibrant-blue rounded-xl flex items-center justify-center text-white">
+                        <item.icon size={20} />
+                      </div>
+                      <h4 className="font-bold text-white">{item.title}</h4>
+                      <p className="text-xs text-white/50 leading-relaxed">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <a 
+                  href="#" 
+                  className="inline-flex items-center gap-3 bg-vibrant-blue hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-bold text-lg transition shadow-2xl shadow-vibrant-blue/40 group"
+                >
+                  Quero Receber a Apresentação
+                  <ChevronRight size={20} className="group-hover:translate-x-1 transition" />
+                </a>
+              </div>
+
+              <div className="relative">
+                <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-8 border-white/5">
+                  <img 
+                    src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-07%20at%204.54.15%20PM.jpeg" 
+                    alt="Unidade SmartWash" 
+                    className="w-full aspect-[4/3] object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/80 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="flex items-center gap-4 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20">
+                      <div className="w-12 h-12 bg-vibrant-blue rounded-xl flex items-center justify-center text-white font-black text-xl">
+                        S
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold text-white">Modelo de Sucesso</div>
+                        <div className="text-xs text-white/60 italic">Unidade Brotas - Salvador/BA</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-24 bg-soft-ice">
         <div className="container mx-auto px-6 max-w-4xl">
@@ -867,11 +940,11 @@ export default function App() {
             <div>
               <h4 className="font-bold mb-6 uppercase tracking-widest text-xs text-vibrant-blue">Links Rápidos</h4>
               <ul className="space-y-4 text-sm text-white/60">
-                <li><a href="#" className="hover:text-white transition">Sobre Nós</a></li>
-                <li><a href="#" className="hover:text-white transition">Como Funciona</a></li>
-                <li><a href="#" className="hover:text-white transition">Nossas Unidades</a></li>
-                <li><a href="#" className="hover:text-white transition">Clube de Vantagens</a></li>
-                <li><a href="#" className="hover:text-white transition">Seja um Franqueado</a></li>
+                <li><a href="#sobre" className="hover:text-white transition">Sobre Nós</a></li>
+                <li><a href="#como-funciona" className="hover:text-white transition">Como Funciona</a></li>
+                <li><a href="#unidades" className="hover:text-white transition">Nossas Unidades</a></li>
+                <li><a href="#precos" className="hover:text-white transition">Preços</a></li>
+                <li><a href="#franquias" className="hover:text-white transition">Seja um Franqueado</a></li>
               </ul>
             </div>
             
