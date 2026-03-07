@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Brand Colors */
+  --color-deep-navy: #1C1F32;
+  --color-lavender: #846FFC;
+  --color-vibrant-blue: #254DE8;
+  --color-soft-ice: #F2F2F2;
+  --color-medium-gray: #E6E6E6;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}
