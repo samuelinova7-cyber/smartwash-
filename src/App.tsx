@@ -92,7 +92,7 @@ export default function App() {
             <a href="#unidades" className="hover:text-vibrant-blue transition">Unidades</a>
           </div>
 
-          <a href="#" className="bg-vibrant-blue hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 transition shadow-lg shadow-vibrant-blue/20">
+          <a href="https://wa.me/5571999115133" target="_blank" rel="noopener noreferrer" className="bg-vibrant-blue hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 transition shadow-lg shadow-vibrant-blue/20">
             <MessageCircle size={18} />
             WhatsApp
           </a>
@@ -131,7 +131,7 @@ export default function App() {
               </a>
             </div>
             
-            <a href="#como-funciona" className="inline-flex bg-[#10B981] hover:bg-[#059669] text-white px-8 py-4 rounded-2xl font-bold transition shadow-xl shadow-emerald-100">
+            <a href="#precos" className="inline-flex bg-[#10B981] hover:bg-[#059669] text-white px-8 py-4 rounded-2xl font-bold transition shadow-xl shadow-emerald-100">
               Quero lavar agora
             </a>
           </motion.div>
@@ -303,7 +303,9 @@ export default function App() {
 
                   <div className="space-y-4">
                     <a 
-                      href="#" 
+                      href="https://wa.me/5571999115133" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center justify-center gap-3 w-full bg-vibrant-blue hover:bg-blue-700 text-white py-5 rounded-2xl font-bold text-lg transition shadow-xl shadow-vibrant-blue/20 group"
                     >
                       <MessageCircle size={24} />
@@ -524,6 +526,19 @@ export default function App() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-20">
+            {/* Video Section */}
+            <div className="md:col-span-3 mb-12 flex justify-center">
+              <div className="relative rounded-[40px] overflow-hidden shadow-[0_32px_64px_-16px_rgba(37,77,232,0.2)] border-8 border-white/10 max-w-2xl w-full">
+                <video
+                  src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-f9f32ac1-27a4-4614-9846-67d6832fab50.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
             {[
               { 
                 discount: "10%", 
@@ -554,9 +569,14 @@ export default function App() {
                 <p className={`text-sm leading-relaxed mb-8 ${plan.featured ? 'text-white/80' : 'text-white/60'}`}>
                   {plan.desc}
                 </p>
-                <button className={`mt-auto w-full py-4 rounded-2xl font-bold transition ${plan.featured ? 'bg-white text-vibrant-blue hover:bg-slate-100' : 'bg-white/10 text-white hover:bg-white/20'}`}>
+                <a 
+                  href="https://wa.me/5571999115133" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`mt-auto w-full py-4 rounded-2xl font-bold transition block ${plan.featured ? 'bg-white text-vibrant-blue hover:bg-slate-100' : 'bg-white/10 text-white hover:bg-white/20'}`}
+                >
                   Antecipar Agora
-                </button>
+                </a>
               </div>
             ))}
           </div>
@@ -603,29 +623,32 @@ export default function App() {
           <div className="grid lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Brotas",
+                name: "Brotas (Matriz)",
                 address: "Rua Waldemar Falcão, 146 - Shopping Florestal, Salvador - BA, 40296-700",
                 hours: "Aberto até as 23:00",
-                phone: "(71) 99911-5133 / 99182-1660",
+                phone: "(71) 99911-5133",
                 highlight: "Localizada dentro do Shopping Florestal; Avaliação 5.0 (66 comentários)",
                 image: "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-07%20at%204.54.15%20PM.jpeg",
+                main: true,
+                link: "https://taggycontact.me/SmartWashBrotas"
               },
               {
                 name: "Santa Teresa",
                 address: "Rua Luís Negreiro, 639 - Santa Teresa (Posto Ipiranga), Salvador - BA, 40265-090",
                 hours: "Aberto 24 horas",
-                phone: "(71) 99182-1660 / 99911-5133",
+                phone: "(71) 99911-5133",
                 highlight: "Conveniência 24h situada em um posto de combustíveis.",
-                image: "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-07%20at%204.54.49%20PM.jpeg"
+                image: "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-07%20at%204.54.49%20PM.jpeg",
+                link: "https://taggycontact.me/smartwashacm"
               },
               {
-                name: "Pituba (Matriz)",
+                name: "Pituba",
                 address: "Rua Amazonas - Edifício Amazonas, Loja 03 - Pituba, Salvador - BA, 41830-380",
                 hours: "Aberto até as 00:00",
-                phone: "(71) 99911-5133 / 99182-1660",
+                phone: "(71) 99911-5133",
                 highlight: "Atendimento via WhatsApp e localização privilegiada.",
                 image: "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-07%20at%204.54.30%20PM.jpeg",
-                main: true
+                link: "https://taggycontact.me/smartwashpituba"
               }
             ].map((unidade, i) => (
               <div key={i} className={`bg-medium-gray rounded-[32px] border ${unidade.main ? 'border-vibrant-blue shadow-xl shadow-vibrant-blue/10' : 'border-white/10 shadow-sm'} flex flex-col h-full relative overflow-hidden group`}>
@@ -661,7 +684,7 @@ export default function App() {
                       {unidade.highlight}
                     </p>
                   </div>
-                  <a href="#" className={`w-full py-4 rounded-2xl font-bold text-center transition ${unidade.main ? 'bg-vibrant-blue text-white hover:bg-vibrant-blue/90' : 'bg-soft-ice text-deep-navy hover:bg-soft-ice/80'}`}>
+                  <a href={unidade.link} target="_blank" rel="noopener noreferrer" className={`w-full py-4 rounded-2xl font-bold text-center transition ${unidade.main ? 'bg-vibrant-blue text-white hover:bg-vibrant-blue/90' : 'bg-soft-ice text-deep-navy hover:bg-soft-ice/80'}`}>
                     Saber mais sobre esta unidade
                   </a>
                 </div>
@@ -849,7 +872,7 @@ export default function App() {
                 </div>
 
                 <a 
-                  href="https://wa.me/5571999115133?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20ser%20um%20franqueado%20SmartWash.%20Gostaria%20de%20receber%20a%20apresenta%C3%A7%C3%A3o." 
+                  href="https://smartwash-franquia.vercel.app/" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 bg-vibrant-blue hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-bold text-lg transition shadow-2xl shadow-vibrant-blue/40 group"
@@ -940,10 +963,10 @@ export default function App() {
                 A lavanderia self-service que devolve seu tempo. Tecnologia de ponta, economia real e o melhor cuidado para suas roupas em Salvador.
               </p>
               <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-vibrant-blue transition text-white">
+                <a href="https://www.instagram.com/smartwashlavanderia/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-vibrant-blue transition text-white">
                   <Instagram size={20} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-vibrant-blue transition text-white">
+                <a href="https://wa.me/5571999115133" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-[#25D366] transition text-white">
                   <MessageCircle size={20} />
                 </a>
               </div>
@@ -991,7 +1014,9 @@ export default function App() {
 
       {/* Floating WhatsApp Button */}
       <a 
-        href="#" 
+        href="https://wa.me/5571999115133" 
+        target="_blank"
+        rel="noopener noreferrer"
         className="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl shadow-emerald-500/20 hover:scale-110 transition-transform group"
       >
         <MessageCircle size={28} fill="currentColor" />
