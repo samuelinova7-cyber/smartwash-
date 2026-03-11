@@ -5,10 +5,10 @@ import { useState, useRef, useEffect } from 'react';
 const FAQ_ITEMS = [
   { q: "Onde a SmartWash está localizada?", a: "Estamos presentes em 3 endereços em Salvador: Pituba (Rua Amazonas, 1068), Av. ACM e Brotas." },
   { q: "Preciso levar sabão ou amaciante?", a: "Não! Utilizamos produtos de alta performance (Linha OMO e Comfort Profissional) que já são dispensados automaticamente pelas máquinas." },
-  { q: "Quanto tempo demora o processo?", a: "Em média, 30 minutos para lavar e 45 minutos para secar. Suas roupas prontas em pouco mais de uma hora." },
+  { q: "Quanto tempo demora o processo?", a: "Em média, 36 minutos para lavar e 45 minutos para secar. Suas roupas prontas em pouco mais de uma hora." },
   { q: "Quais as formas de pagamento aceitas?", a: "Aceitamos cartões de crédito, débito e PIX através do nosso terminal de autoatendimento." },
-  { q: "Posso lavar edredom e cobertor?", a: "Sim! Nossas máquinas industriais comportam edredons de casal e até tamanho King." },
-  { q: "Como funciona o sistema self-service?", a: "É simples: você escolhe a máquina, efetua o pagamento no terminal, coloca a roupa e dá o play." },
+  { q: "Posso lavar edredom e cobertor?", a: "Sim! Nossas máquinas industriais comportam edredons até tamanho Queen." },
+  { q: "Como funciona o sistema self-service?", a: "É simples: você escolhe a máquina, efetua o pagamento no terminal, coloca a roupa e dá o inicio." },
   { q: "A lavanderia está aberta em feriados?", a: "Sim, funcionamos todos os dias, incluindo domingos e feriados (verificar horários específicos de cada unidade no Google)." },
   { q: "Existe algum suporte no local?", a: "Nossas unidades são monitoradas e possuem totens de instrução claros, mas oferecemos suporte via WhatsApp para qualquer dúvida." },
   { q: "As máquinas de secar estragam a roupa?", a: "Não, você pode selecionar a temperatura ideal. A secagem correta ajuda até a eliminar a necessidade de passar o ferro em muitas peças." },
@@ -114,24 +114,24 @@ export default function App() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tight text-deep-navy">
-              Lavanderia Self-Service em Salvador – <span className="text-vibrant-blue">Rápida, Moderna e Econômica</span>
+              Lavanderia Self-Service – <span className="text-vibrant-blue">Rápida, Moderna e Econômica</span>
             </h1>
             
             <p className="text-lg text-deep-navy/70 mb-10 leading-relaxed">
-              Na SmartWash você lava e seca suas roupas em aproximadamente uma hora, com produtos <span className="text-vibrant-blue font-semibold">profissionais</span> inclusos e total autonomia.
+              Na SmartWash você lava e seca suas roupas em pouco mais de uma hora, com produtos <span className="text-vibrant-blue font-semibold">profissionais</span> inclusos e total autonomia.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-6">
-              <a href="#" className="bg-vibrant-blue hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 transition shadow-xl shadow-vibrant-blue/20 group">
+              <a href="#unidades" className="bg-vibrant-blue hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 transition shadow-xl shadow-vibrant-blue/20 group">
                 Ver Unidades
                 <ChevronRight size={20} className="group-hover:translate-x-1 transition" />
               </a>
-              <a href="#" className="bg-soft-ice border border-medium-gray hover:border-vibrant-blue/20 text-deep-navy px-8 py-4 rounded-2xl font-bold transition">
+              <a href="#como-funciona" className="bg-soft-ice border border-medium-gray hover:border-vibrant-blue/20 text-deep-navy px-8 py-4 rounded-2xl font-bold transition">
                 Como Funciona
               </a>
             </div>
             
-            <a href="#" className="inline-flex bg-[#10B981] hover:bg-[#059669] text-white px-8 py-4 rounded-2xl font-bold transition shadow-xl shadow-emerald-100">
+            <a href="#como-funciona" className="inline-flex bg-[#10B981] hover:bg-[#059669] text-white px-8 py-4 rounded-2xl font-bold transition shadow-xl shadow-emerald-100">
               Quero lavar agora
             </a>
           </motion.div>
@@ -159,7 +159,7 @@ export default function App() {
                   <Zap size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-deep-navy text-sm">SmartWash Salvador</h4>
+                  <h4 className="font-bold text-deep-navy text-sm">SmartWash Lavanderia</h4>
                   <p className="text-xs text-deep-navy/70">Sua roupa pronta em aproximadamente uma hora</p>
                 </div>
               </div>
@@ -194,7 +194,7 @@ export default function App() {
                 A SmartWash foi fundada com um propósito simples: devolver tempo, economia e praticidade para você.
               </p>
               <p>
-                Somos referência em lavanderia self-service em Salvador, oferecendo uma estrutura moderna, ambiente seguro e equipamentos de alta performance que garantem mais eficiência e cuidado com suas roupas.
+                Somos referência em lavanderia self-service, oferecendo uma estrutura moderna, ambiente seguro e equipamentos de alta performance que garantem mais eficiência e cuidado com suas roupas.
               </p>
               <p>
                 Aqui você encontra praticidade, economia, autonomia e tecnologia para resolver tudo em aproximadamente uma hora — sem burocracia e sem esperar dias para retirar suas peças.
@@ -235,11 +235,11 @@ export default function App() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { icon: Zap, title: "Alta Performance", desc: "Máquinas industriais de última geração com alta capacidade e produtos profissionais." },
-              { icon: ShieldCheck, title: "Esterilização UV", desc: "Luz ultravioleta que elimina 99.9% de germes e bactérias." },
+              { icon: ShieldCheck, title: "Produtos premium", desc: "Utilizamos OMO e Comfort super concentrado." },
               { icon: MapPin, title: "Estacionamento", desc: "Vagas exclusivas na porta para sua total comodidade." },
-              { icon: Clock, title: "Funcionamento 24h", desc: "Sempre aberto, sábado, domingo e feriados 24 horas." },
-              { icon: Maximize, title: "Conforto", desc: "Estrutura organizada e climatizada com Wi-Fi, Alexa e espaço kids." },
-              { icon: Coins, title: "Cashback", desc: "Quem escolhe a SmartWash regularmente aproveita benefícios especiais de forma automática. Porque fidelidade merece retorno." },
+              { icon: Clock, title: "Aberto todos os dias", desc: "Funciona todos os dias da semana, inclusive feriado." },
+              { icon: Maximize, title: "Conforto", desc: "Estrutura organizada, climatizada com Wi-Fi e espaço para trabalho." },
+              { icon: Coins, title: "Clientes fiéis", desc: "Quem escolhe a SmartWash regularmente recebe presentes no aniversário e em outras datas especiais." },
             ].map((item, i) => (
               <div key={i} className="bg-medium-gray p-10 rounded-[32px] shadow-sm border border-white/10 hover:shadow-xl hover:shadow-vibrant-blue/10 transition-all duration-300">
                 <div className="w-14 h-14 bg-vibrant-blue/5 rounded-2xl flex items-center justify-center text-vibrant-blue mb-6">
@@ -333,8 +333,8 @@ export default function App() {
             {[
               { icon: Wifi, title: "Wi-Fi Grátis", desc: "Conecte-se enquanto espera." },
               { icon: Maximize, title: "Ar Condicionado", desc: "Ambiente sempre climatizado." },
-              { icon: Star, title: "Espaço Kids", desc: "Diversão para os pequenos." },
-              { icon: Volume2, title: "Alexa", desc: "Peça sua música favorita." },
+              { icon: Star, title: "Workspace", desc: "Espaço de trabalho para você." },
+              { icon: Volume2, title: "Ambiente clean", desc: "Conforto de estar em casa." },
             ].map((item, i) => (
               <div key={i} className="bg-soft-ice p-8 rounded-[32px] text-center border border-white/10">
                 <div className="w-12 h-12 bg-medium-gray rounded-xl flex items-center justify-center text-vibrant-blue mx-auto mb-4 shadow-sm">
@@ -483,7 +483,7 @@ export default function App() {
                 
                 <div className="flex gap-4 w-full max-w-md">
                   <div className="flex-1 bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/10 text-center">
-                    <div className="text-3xl font-black mb-1">-40%</div>
+                    <div className="text-3xl font-black mb-1">-50%</div>
                     <div className="text-[10px] font-bold uppercase tracking-widest opacity-70">Consumo de Água</div>
                   </div>
                   <div className="flex-1 bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/10 text-center">
@@ -513,10 +513,13 @@ export default function App() {
               <Sparkles size={14} /> Exclusivo para Membros
             </div>
             <h2 className="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tight">
-              Clube de <span className="text-vibrant-blue">Vantagens</span> Smart Wash
+              Clube <span className="text-vibrant-blue">SmartWash</span> de Vantagens
             </h2>
             <p className="text-white/60 text-lg">
               Ao aderir ao nosso clube, você garante descontos exclusivos ao antecipar seus ciclos de lavagem. Economia real para quem valoriza praticidade.
+            </p>
+            <p className="text-vibrant-blue text-sm mt-2 font-bold">
+              *Disponível apenas na unidade Pituba.
             </p>
           </div>
           
@@ -600,29 +603,29 @@ export default function App() {
           <div className="grid lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Brotas (Matriz)",
+                name: "Brotas",
                 address: "Rua Waldemar Falcão, 146 - Shopping Florestal, Salvador - BA, 40296-700",
                 hours: "Aberto até as 23:00",
-                phone: "(71) 98109-7401",
+                phone: "(71) 99911-5133 / 99182-1660",
                 highlight: "Localizada dentro do Shopping Florestal; Avaliação 5.0 (66 comentários)",
                 image: "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-07%20at%204.54.15%20PM.jpeg",
-                main: true
               },
               {
                 name: "Santa Teresa",
                 address: "Rua Luís Negreiro, 639 - Santa Teresa (Posto Ipiranga), Salvador - BA, 40265-090",
                 hours: "Aberto 24 horas",
-                phone: "(71) 99906-3612",
+                phone: "(71) 99182-1660 / 99911-5133",
                 highlight: "Conveniência 24h situada em um posto de combustíveis.",
                 image: "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-07%20at%204.54.49%20PM.jpeg"
               },
               {
-                name: "Pituba",
+                name: "Pituba (Matriz)",
                 address: "Rua Amazonas - Edifício Amazonas, Loja 03 - Pituba, Salvador - BA, 41830-380",
                 hours: "Aberto até as 00:00",
-                phone: "(71) 99388-0892",
+                phone: "(71) 99911-5133 / 99182-1660",
                 highlight: "Atendimento via WhatsApp e localização privilegiada.",
-                image: "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-07%20at%204.54.30%20PM.jpeg"
+                image: "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-07%20at%204.54.30%20PM.jpeg",
+                main: true
               }
             ].map((unidade, i) => (
               <div key={i} className={`bg-medium-gray rounded-[32px] border ${unidade.main ? 'border-vibrant-blue shadow-xl shadow-vibrant-blue/10' : 'border-white/10 shadow-sm'} flex flex-col h-full relative overflow-hidden group`}>
@@ -742,12 +745,12 @@ export default function App() {
           <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-12">
             <div>
               <div className="inline-flex items-center gap-2 bg-vibrant-blue/10 text-vibrant-blue px-4 py-1.5 rounded-full text-[11px] font-bold tracking-wider uppercase mb-4 border border-vibrant-blue/20">
-                <Instagram size={14} /> @smartwashsalvador
+                <Instagram size={14} /> @smartwashlavanderia
               </div>
               <h2 className="text-4xl font-black mb-4 uppercase">Conecte-se <span className="text-vibrant-blue">conosco</span></h2>
               <p className="text-deep-navy/70 mt-2">Acompanhe novidades, dicas e promoções em nosso Instagram.</p>
             </div>
-            <a href="https://www.instagram.com/smartwashsalvador/" target="_blank" rel="noopener noreferrer" className="bg-vibrant-blue hover:bg-vibrant-blue/90 text-white px-8 py-4 rounded-2xl font-bold transition shadow-xl shadow-vibrant-blue/20">
+            <a href="https://www.instagram.com/smartwashlavanderia/" target="_blank" rel="noopener noreferrer" className="bg-vibrant-blue hover:bg-vibrant-blue/90 text-white px-8 py-4 rounded-2xl font-bold transition shadow-xl shadow-vibrant-blue/20">
               Seguir no Instagram
             </a>
           </div>
@@ -776,22 +779,29 @@ export default function App() {
               "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-07%20172859.png",
               "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-07%20172844.png"
             ].map((img, i) => (
-              <motion.div 
-                key={i} 
-                className="w-[280px] md:w-[350px] aspect-square bg-soft-ice rounded-[32px] overflow-hidden shrink-0 snap-center shadow-sm border border-white/10 group relative"
-                whileHover={{ y: -10 }}
-                transition={{ duration: 0.3 }}
+              <a
+                key={i}
+                href={i % 2 === 0 ? "https://www.instagram.com/smartwashlavanderia/" : "https://wa.me/5571999115133"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
               >
-                <img 
-                  src={img} 
-                  alt={`Instagram post ${i}`} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
-                  <Instagram size={32} />
-                </div>
-              </motion.div>
+                <motion.div 
+                  className="w-[280px] md:w-[350px] aspect-square bg-soft-ice rounded-[32px] overflow-hidden shrink-0 snap-center shadow-sm border border-white/10 group relative"
+                  whileHover={{ y: -10 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img 
+                    src={img} 
+                    alt={`Instagram post ${i}`} 
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                    <Instagram size={32} />
+                  </div>
+                </motion.div>
+              </a>
             ))}
           </div>
           
@@ -839,10 +849,12 @@ export default function App() {
                 </div>
 
                 <a 
-                  href="#" 
+                  href="https://wa.me/5571999115133?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20ser%20um%20franqueado%20SmartWash.%20Gostaria%20de%20receber%20a%20apresenta%C3%A7%C3%A3o." 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 bg-vibrant-blue hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-bold text-lg transition shadow-2xl shadow-vibrant-blue/40 group"
                 >
-                  Quero Receber a Apresentação
+                  Quero receber a apresentação
                   <ChevronRight size={20} className="group-hover:translate-x-1 transition" />
                 </a>
               </div>
@@ -957,18 +969,18 @@ export default function App() {
                 </li>
                 <li className="flex items-center gap-3">
                   <MessageCircle size={16} className="text-vibrant-blue" />
-                  (71) 98109-7401
+                  (71) 99911-5133
                 </li>
                 <li className="flex items-center gap-3">
                   <Sparkles size={16} className="text-vibrant-blue" />
-                  smartwashsalvador@gmail.com
+                  lavanderiasmartwashssa@gmail.com
                 </li>
               </ul>
             </div>
           </div>
           
           <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-white/40 font-medium">
-            <p>© 2024 SmartWash Salvador. Todos os direitos reservados.</p>
+            <p>© 2024 SmartWash Lavanderia Self-Service. Todos os direitos reservados.</p>
             <div className="flex gap-8">
               <a href="#" className="hover:text-white transition">Política de Privacidade</a>
               <a href="#" className="hover:text-white transition">Termos de Uso</a>
