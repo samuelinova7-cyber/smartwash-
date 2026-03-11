@@ -623,13 +623,12 @@ export default function App() {
           <div className="grid lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Brotas (Matriz)",
+                name: "Brotas",
                 address: "Rua Waldemar Falcão, 146 - Shopping Florestal, Salvador - BA, 40296-700",
                 hours: "Aberto até as 23:00",
                 phone: "(71) 99911-5133",
                 highlight: "Localizada dentro do Shopping Florestal; Avaliação 5.0 (66 comentários)",
                 image: "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-07%20at%204.54.15%20PM.jpeg",
-                main: true,
                 link: "https://taggycontact.me/SmartWashBrotas"
               },
               {
@@ -642,12 +641,13 @@ export default function App() {
                 link: "https://taggycontact.me/smartwashacm"
               },
               {
-                name: "Pituba",
+                name: "Pituba (Matriz)",
                 address: "Rua Amazonas - Edifício Amazonas, Loja 03 - Pituba, Salvador - BA, 41830-380",
                 hours: "Aberto até as 00:00",
                 phone: "(71) 99911-5133",
                 highlight: "Atendimento via WhatsApp e localização privilegiada.",
                 image: "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-07%20at%204.54.30%20PM.jpeg",
+                main: true,
                 link: "https://taggycontact.me/smartwashpituba"
               }
             ].map((unidade, i) => (
