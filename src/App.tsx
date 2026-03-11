@@ -526,18 +526,39 @@ export default function App() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-20">
-            {/* Video Section */}
+            {/* Image Section with Animation */}
             <div className="md:col-span-3 mb-12 flex justify-center">
-              <div className="relative rounded-[40px] overflow-hidden shadow-[0_32px_64px_-16px_rgba(37,77,232,0.2)] border-8 border-white/10 max-w-2xl w-full">
-                <video
-                  src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-f9f32ac1-27a4-4614-9846-67d6832fab50.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="relative max-w-2xl w-full"
+              >
+                <motion.div
+                  animate={{ 
+                    y: [0, -15, 0],
+                  }}
+                  transition={{ 
+                    duration: 4, 
+                    repeat: Infinity, 
+                    ease: "easeInOut" 
+                  }}
+                  className="relative rounded-[40px] overflow-hidden shadow-[0_32px_64px_-16px_rgba(37,77,232,0.4)] border-8 border-white/10"
+                >
+                  <img
+                    src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-11%20103023.png"
+                    alt="Clube SmartWash de Vantagens"
+                    className="w-full h-auto object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                  <motion.div 
+                    animate={{ x: ["-100%", "200%"] }}
+                    transition={{ duration: 3, repeat: Infinity, repeatDelay: 5, ease: "easeInOut" }}
+                    className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"
+                  />
+                </motion.div>
+              </motion.div>
             </div>
             {[
               { 
